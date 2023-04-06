@@ -94,16 +94,4 @@ router.post('/register', async (req, res) => {
     }
 })
 
-// router.get('/users', async (req, res) => {
-//     const {limit,offset} = req.body
-//     if (typeof(limit) !== 'number') return  res.json({error:'limit is not a number'})
-//     if (typeof(offset) !== 'number') return  res.json({error:'offset is not a number'})
-//     //SQLite code
-//     const {user:table} = require('../sql/tables')
-//     const sqliteCode = `SELECT * FROM user ORDER BY id LIMIT ${limit} OFFSET ${offset}`
-//     const {get:databaseGet} = require("../db/database")
-//     const data = await databaseGet({table:table,sqliteCode:sqliteCode})
-//     res.json({data})
-//   })
-
 module.exports = router;
